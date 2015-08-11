@@ -91,7 +91,35 @@ sudo python '/home/ammar/Desktop/mmattack.py'
 Now all you need to do is enter the details it asks. Here is an example of what it should look like:
 ![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/6.png)
 
+If everything goes well, you should be able to start sending packets.
+![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/7.png)
 
+Now while this ARP request is being spammed, we need to open wireshark
+![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/8.png)
+
+Select the proper interface you are connected to. If you are not sure, select the `any` option and click start 
+
+You should see a screen like this now:
+![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/9.png)
+
+With the `ARP` protocol requests getting spammed. If you don't see this, you have done some mistake. 
+
+Now to see what the victim is browsing, you can type the following in the filter:
+```
+ip.addr=={ipaddress_of_the_victim} and http.request
+```
+
+Note: This will only show you the http traffic. You might want to try other filters if you want to get other traffic.
+Because the IP address of the victim is `192.168.20.240` for me, I will type the following in the filter:
+```
+ip.addr==192.168.20.240 and http.request
+```
+
+and press enter.
+
+![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/10.png)
+
+As you see from the image, the victim is on an android device and is browsing the website `www.tagcraftmc.com`
 
 ##### 
 By default, the script uses default Pictures folder (i.e `~/Pictures`) in Ubuntu.
