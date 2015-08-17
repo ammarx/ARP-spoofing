@@ -85,7 +85,7 @@ You should see something like this after it is done scanning your network:
 
 Now that you have gotten the IP address and the MAC address of the victim, all you need to do is launch the actual attack. To do that fire up the script you downloaded.
 ```
-$ sudo python '/home/ammar/Desktop/mmattack.py'
+$ sudo python '/home/**[computer name]**/mmattack.py'
 ```
 
 Now all you need to do is enter the details it asks. Here is an example of what it should look like:
@@ -121,6 +121,13 @@ and press enter.
 As you see from the image above, the victim is on an android device and is browsing the website `www.tagcraftmc.com`
 
 This sort of attack should work on any network that uses ARP request to get the device details.
+
+# Extra
+
+Here is a video of me performing all of these steps, so it is much easier for you to follow:
+
+[![ARP-Spoof](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/res/11.png)](https://drive.google.com/file/d/0B4LJfOrWbK6bekVnN2RGTEpGajQ/view)
+
 
 # Credits
 
