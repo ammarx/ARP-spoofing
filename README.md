@@ -109,8 +109,7 @@ Now to see what the victim is browsing, you can type the following in the filter
 ip.addr=={ipaddress_of_the_victim} and http.request
 ```
 
-Note: This filter allows you to see the http traffic only. If you want to look at other traffic, I recommend you learn how to use wireshark as this will help you to snoop around more easily.
-Because the IP address of the victim is `192.168.20.240` for me, I will type the following in the filter:
+> Note: This filter allows you to see the http traffic only. If you want to look at other traffic, I recommend you learn how to use wireshark as this will help you to snoop around more easily. Because the IP address of the victim is `192.168.20.240` for me, I will type the following in the filter:
 ```
 ip.addr==192.168.20.240 and http.request
 ```
