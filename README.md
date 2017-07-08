@@ -51,7 +51,9 @@ $ sudo nano '/proc/sys/net/ipv4/ip_forward'
 This will open up the ip_forward file. The default value in it should be `0`, change it to `1` and then save and exit.
 ![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/res/3.png)
 
-Now that we have that sorted, we need to get the MAC address and the IP address of the victim we want to attack on our network. To do that, you first need to see what IP address the router has given you. On Ubuntu you can get that info by going to the Connection Information menu:
+Now that we have that sorted, we need to get the MAC address and the IP address of the victim we want to attack on our network. To do that, you first need to see what IP address the router has given you. 
+
+On Ubuntu you can get that info by going to the Connection Information menu:
 ![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/res/4.png)
 
 # Gathering MAC and IP addresses
@@ -63,6 +65,7 @@ In the above image, you also can see that our Subnet Mask is: `255.255.255.0`
 The `0` in the above simply means that that block `1-254` is available to the client, while the rest of the blocks are available to the host.
 
 Now keep that in mind and look at this image below:
+
 ![](https://raw.githubusercontent.com/ammarx/ARP-spoofing/master/res/subnetting_c.png)
 
 As you can see the Mask length for the `255.255.255.0` is `24`, you can calculate this yourself by converting the Subnet Mask into binary and then counting all the ones. Example: `255.255.255.0` into binary: `1111 1111 . 1111 1111 . 1111 1111 . 0000 0000` So the number of ones are `24`. Now you might be wondering why we need this number? Well this is required for the next step, which is to get the MAC addresses and the IP addresses of everyone connected to your network.
